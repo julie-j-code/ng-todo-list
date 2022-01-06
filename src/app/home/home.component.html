@@ -1,0 +1,5 @@
+<p>Welcome {{name}}</p>
+<input [(ngModel)]="name"/>
+<!-- équivalent de : <input [ngModel]="name" (ngModelChange)="updateName($event)"/> -->
+<button mat-raised-button [color]="btnColor" (click)="btnChangeColor()">Action btnChangeColor</button>
+<button mat-raised-button color="accent" (click)="resetName()">Action resetName</button>
