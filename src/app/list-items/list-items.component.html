@@ -1,0 +1,15 @@
+<div class="container">
+    <div id="list-check">
+
+        <mat-checkbox color="primary" [(ngModel)]="listItem.completed"></mat-checkbox>
+    </div>
+    <div id="list-item-content">
+        <div class="title">{{listItem.title}}</div>
+        <div class="due-date">{{listItem.dueDate}}</div>
+    </div>
+    <div id="list-item-options">
+        <button id="btn-favourite" (click)="toggleFavourite()" >
+            <mat-icon [ngClass]="{'material-icons-outline':!listItem.favourite}">{{favouriteIcon || 'grade'}}</mat-icon>
+</button>
+    </div>
+</div>

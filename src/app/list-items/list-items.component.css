@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    border-bottom: solid 1px #000;
+    padding: 10px;
+    min-height: 30px;
+    align-items: center;
+}
+
+.container:hover{
+    background-color: rgb(192, 182, 182);
+    cursor: pointer;
+}
+
+#list-check, #list-item-options{
+    flex:0 0 auto; 
+}
+
+#list-item-content{
+    flex: 1 1 auto;
+    padding:0 18px;
+}
+
+#btn-favourite{
+    color: orange;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+}
+
+#btn-favourite .material-icons-outline{
+    color: grey;
+    /* outline: 1px; */
+}
+
+.due-date{
+    color: grey;
+    font-size: 0.8rem;
+}
