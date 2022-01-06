@@ -8,24 +8,39 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 // btnColor= "accent";
 // name="julie";
-listItem={
-  title:"My first task",
-  dueDate:"28/01/2022",
-  completed:true,
-  favourite:true
-};
-listItem2={
-  title:"My second task",
-  dueDate:"25/01/2022",
-  completed:false,
-  favourite:true
-};
-listItem3={
-  title:"My third task",
-  dueDate:"17/02/2022",
-  completed:false,
-  favourite:false
-};
+toDoList=[
+
+  {
+    title:"My first task",
+    dueDate:"28/01/2022",
+    completed:true,
+    favourite:true
+  },
+  {
+    title:"UX Design Interior Template",
+    dueDate:"25/01/2021",
+    completed:true,
+    favourite:true
+  },
+  {
+    title:"New Angular Project",
+    dueDate:"17/02/2022",
+    completed:false,
+    favourite:false
+  },
+  {
+    title:"Do my video",
+    dueDate:"17/02/2022",
+    completed:false,
+    favourite:false
+  },
+  {
+    title:"Improve Design",
+    dueDate:"17/02/2022",
+    completed:true,
+    favourite:false
+  }
+]
 
 favouriteIcon="home";
 
@@ -36,9 +51,8 @@ favouriteIcon="home";
 
   logListItems(){
     console.table([
-      this.listItem,
-      this.listItem2,
-      this.listItem3
+      this.toDoList
+
     ]);
   }
 

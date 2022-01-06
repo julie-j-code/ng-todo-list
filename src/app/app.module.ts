@@ -12,13 +12,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ListItemsComponent } from './list-items/list-items.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     HomeComponent,
-    ListItemsComponent
+    ListItemsComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
