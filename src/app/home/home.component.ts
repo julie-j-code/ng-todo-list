@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoList } from '../models/todo-list.model';
+import { TodoService } from '../services/todo/todo.service';
 
 @Component({
   selector: 'app-home',
@@ -8,53 +10,61 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 // btnColor= "accent";
 // name="julie";
-toDoList=[
+// toDoList=[
+//   {
+//     title:"My first task",
+//     dueDate:"28/01/2022",
+//     completed:true,
+//     favourite:true
+//   },
+//   {
+//     title:"UX Design Interior Template",
+//     dueDate:"25/01/2021",
+//     completed:true,
+//     favourite:true
+//   },
+//   {
+//     title:"New Angular Project",
+//     dueDate:"17/02/2022",
+//     completed:false,
+//     favourite:false
+//   },
+//   {
+//     title:"Do my video",
+//     dueDate:"17/02/2022",
+//     completed:false,
+//     favourite:false
+//   },
+//   {
+//     title:"Improve Design",
+//     dueDate:"17/02/2022",
+//     completed:true,
+//     favourite:false
+//   }
+// ]
 
-  {
-    title:"My first task",
-    dueDate:"28/01/2022",
-    completed:true,
-    favourite:true
-  },
-  {
-    title:"UX Design Interior Template",
-    dueDate:"25/01/2021",
-    completed:true,
-    favourite:true
-  },
-  {
-    title:"New Angular Project",
-    dueDate:"17/02/2022",
-    completed:false,
-    favourite:false
-  },
-  {
-    title:"Do my video",
-    dueDate:"17/02/2022",
-    completed:false,
-    favourite:false
-  },
-  {
-    title:"Improve Design",
-    dueDate:"17/02/2022",
-    completed:true,
-    favourite:false
-  }
-]
+todoListsArray:TodoList[];
+selectedTodoList:TodoList;
 
 favouriteIcon="home";
 
-  constructor() { }
+  constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
+    this.todoListsArray=this.todoService.getTodoLists();
+    this.selectedTodoList=this.todoListsArray[0];
   }
 
-  logListItems(){
-    console.table([
-      this.toDoList
-
-    ]);
+  selectTodoList(todoList){
+    this.selectedTodoList=todoList
   }
+
+  // logListItems(){
+  //   console.table([
+  //     this.todoListArray
+
+  //   ]);
+  // }
 
 //   btnChangeColor(){
 //     if (this.btnColor==="primary"){

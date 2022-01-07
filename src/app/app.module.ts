@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { FormsModule } from '@angular/forms';
 
@@ -29,6 +30,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
+    MatSidenavModule,
     FormsModule
   ],
   providers: [],

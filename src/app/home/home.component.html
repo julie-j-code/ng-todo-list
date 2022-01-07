@@ -7,5 +7,20 @@
 <app-list-items [listItem]="listItem2"></app-list-items>
 <app-list-items [listItem]="listItem3"></app-list-items>
  -->
-<app-todo-list [toDoList]="toDoList"></app-todo-list>
-<button mat-button (click)="logListItems()">Log ListItems</button>
+<mat-drawer-container>
+    <mat-drawer mode="side" opened>
+        <div id="list-title">List Title</div>
+        <div id="lists">
+            <button mat-button *ngFor="let todoList of todoListsArray"
+            [ngClass]="{'selected':todoList.id===selectedTodoList.id}"
+            (click)="selectTodoList(todoList)">{{todoList.name}}</button>
+
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="container">
+            <app-todo-list [toDoList]="selectedTodoList.todos"></app-todo-list>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+

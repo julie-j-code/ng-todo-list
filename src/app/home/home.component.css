@@ -1,4 +1,45 @@
-button{
+/* button{
     display: block;
     margin-top:1rem;
+} */
+
+mat-drawer-container{
+    height: 100%;
 }
+
+mat-drawer{
+    background-color: #999;
+}
+
+mat-drawer-content{
+    background-color: aliceblue;
+}
+
+#list-title{
+    text-align: left;
+    width : calc(100%-20px);
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+#lists button{
+    display: inline-block;
+    width:100%;
+    color: white;
+    text-align: left;
+    border-radius: 0px;
+}
+
+#lists button:hover{
+    background-color: blue;
+}
+
+#lists button.selected{
+    background-color: #333;
+}
+
+#lists, .container, #list-title{
+    padding: 10px;
+}
+
