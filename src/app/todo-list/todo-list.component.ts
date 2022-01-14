@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  @Input() toDoList;
+  @Input() todoList;
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class TodoListComponent implements OnInit {
   }
 
   getFavouriteTasks(isFavourite){
-    return this.toDoList.filter(item=>item.favourite===isFavourite)
+    return this.todoList.filter(item=>item.favourite===isFavourite)
   }
 
 }

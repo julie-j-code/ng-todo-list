@@ -3,43 +3,51 @@
     margin-top:1rem;
 } */
 
-mat-drawer-container{
+
+
+mat-drawer-container {
     height: 100%;
 }
 
-mat-drawer{
-    background-color: #999;
+mat-drawer {
+    background-color: #666;
+    width: 250px;
 }
 
-mat-drawer-content{
+mat-drawer-content {
     background-color: aliceblue;
 }
 
-#list-title{
+#list-title {
     text-align: left;
-    width : calc(100%-20px);
+    width: calc(100%-20px);
     background-color: blue;
     color: white;
     font-weight: bold;
 }
 
-#lists button{
+#lists button {
     display: inline-block;
-    width:100%;
+    width: 100%;
     color: white;
     text-align: left;
     border-radius: 0px;
 }
 
-#lists button:hover{
+#lists button:hover {
     background-color: blue;
 }
 
-#lists button.selected{
+#lists button.selected {
     background-color: #333;
 }
 
-#lists, .container, #list-title{
-    padding: 10px;
+.selected {
+    background-color: #333;
 }
 
+#lists,
+.container,
+#list-title {
+    padding: 10px;
+}

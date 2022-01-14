@@ -8,41 +8,6 @@ import { TodoService } from '../services/todo/todo.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-// btnColor= "accent";
-// name="julie";
-// toDoList=[
-//   {
-//     title:"My first task",
-//     dueDate:"28/01/2022",
-//     completed:true,
-//     favourite:true
-//   },
-//   {
-//     title:"UX Design Interior Template",
-//     dueDate:"25/01/2021",
-//     completed:true,
-//     favourite:true
-//   },
-//   {
-//     title:"New Angular Project",
-//     dueDate:"17/02/2022",
-//     completed:false,
-//     favourite:false
-//   },
-//   {
-//     title:"Do my video",
-//     dueDate:"17/02/2022",
-//     completed:false,
-//     favourite:false
-//   },
-//   {
-//     title:"Improve Design",
-//     dueDate:"17/02/2022",
-//     completed:true,
-//     favourite:false
-//   }
-// ]
-
 todoListsArray:TodoList[];
 selectedTodoList:TodoList;
 
@@ -56,7 +21,13 @@ favouriteIcon="home";
   }
 
   selectTodoList(todoList){
-    this.selectedTodoList=todoList
+    this.selectedTodoList=todoList;
+  }
+
+  onListAdded(){
+    if(this.todoListsArray.length===1){
+      this.selectedTodoList=this.todoListsArray[0];
+    }
   }
 
   // logListItems(){

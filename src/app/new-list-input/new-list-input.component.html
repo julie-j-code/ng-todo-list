@@ -1,0 +1,6 @@
+<form [formGroup]="newListForm" #formDirective="ngForm">
+  <mat-form-field id="new-list-input" class="white">
+    <mat-label>New List</mat-label>
+    <input matInput type="text" placeholder="New List" formControlName='listName' (keyup.enter)='addList($event, formDirective)'>
+  </mat-form-field>
+</form>
