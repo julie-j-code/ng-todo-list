@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatDialogModule } from "@angular/material/dialog";
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,8 @@ import { ListItemsComponent } from './list-items/list-items.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NewListInputComponent } from './new-list-input/new-list-input.component';
 import { NewTodoInputComponent } from './new-todo-input/new-todo-input.component';
+import { DialogInformationsComponent } from './dialog-informations/dialog-informations.component';
+import { DialogQuestionsComponent } from './dialog-questions/dialog-questions.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NewTodoInputComponent } from './new-todo-input/new-todo-input.component
     ListItemsComponent,
     TodoListComponent,
     NewListInputComponent,
-    NewTodoInputComponent
+    NewTodoInputComponent,
+    DialogInformationsComponent,
+    DialogQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { NewTodoInputComponent } from './new-todo-input/new-todo-input.component
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

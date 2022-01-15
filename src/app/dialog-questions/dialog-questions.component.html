@@ -1,0 +1,12 @@
+<h2 matDialogTitle>{{title}}</h2>
+
+<mat-dialog-content>
+    {{text}}
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button matDialogClose (click)="sendAnswer(false)">{{labelNo}}</button>
+    <button mat-button mat-raised-button color="primary" matDialogClose (click)="sendAnswer(true)">{{labelYes}}</button>
+    
+</mat-dialog-actions>
+
